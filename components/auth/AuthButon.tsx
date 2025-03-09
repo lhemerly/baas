@@ -2,6 +2,7 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export function AuthButton({ className = '', variant = 'default' }: { className?: string, variant?: 'default' | 'primary' }) {
   const { data: session } = useSession();
@@ -9,7 +10,7 @@ export function AuthButton({ className = '', variant = 'default' }: { className?
   if (session) {
     return (
       <div className={`flex items-center gap-3 ${className}`}>
-        <div className="flex items-center gap-2">
+        <Link href="/profile" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           {session.user?.image && (
             <img
               src={session.user.image}
@@ -20,7 +21,7 @@ export function AuthButton({ className = '', variant = 'default' }: { className?
           <span className="text-sm font-medium hidden sm:inline">
             {session.user?.name || session.user?.email}
           </span>
-        </div>
+        </Link>
         <Button 
           onClick={() => signOut()}
           variant={variant === 'primary' ? 'default' : 'outline'}
