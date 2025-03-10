@@ -37,7 +37,7 @@ export default function Home() {
                 Empower your business with our powerful, scalable, and user-friendly software platform.
               </p>
               <div className="space-x-4 mt-6">
-                <AuthButton variant="primary" className="inline-flex h-10 px-6 py-2.5" />
+                <AuthButton variant="primary" className="inline-flex h-10 px-6 py-2.5" hideOnAuth />
                 <a href="#features" className="inline-flex h-10 items-center justify-center rounded-md border border-gray-300 bg-transparent px-6 py-2.5 text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors">
                   Learn more
                 </a>
@@ -143,7 +143,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-6">
-                  <AuthButton variant="primary" className="w-full" />
+                  <AuthButton variant="primary" className="w-full" hideOnAuth />
                 </div>
               </div>
               
@@ -189,7 +189,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-6">
-                  <AuthButton variant="primary" className="w-full" />
+                  <AuthButton variant="primary" className="w-full" hideOnAuth />
                 </div>
               </div>
               
@@ -232,7 +232,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-6">
-                  <AuthButton variant="primary" className="w-full" />
+                  <AuthButton variant="primary" className="w-full" hideOnAuth />
                 </div>
               </div>
             </div>
@@ -356,7 +356,7 @@ export default function Home() {
                 Join thousands of satisfied customers who are already transforming their business.
               </p>
               <div className="mt-6">
-                <AuthButton className="bg-white text-indigo-600 hover:bg-white/90 px-6 py-2.5" />
+                <AuthButton className="bg-white text-indigo-600 hover:bg-white/90 px-6 py-2.5" hideOnAuth />
               </div>
             </div>
           </div>

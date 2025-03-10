@@ -3,10 +3,22 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-export function AuthButton({ className = '', variant = 'default' }: { className?: string, variant?: 'default' | 'primary' }) {
+export function AuthButton({ 
+  className = '', 
+  variant = 'default',
+  hideOnAuth = false 
+}: { 
+  className?: string, 
+  variant?: 'default' | 'primary',
+  hideOnAuth?: boolean 
+}) {
   const { data: session } = useSession();
 
   if (session) {
+    if (hideOnAuth) {
+      return null;
+    }
+    
     return (
       <div className={`flex items-center gap-3 ${className}`}>
         <div className="flex items-center gap-2">
